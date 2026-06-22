@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-space-900: #0A0F1D;
+  --color-space-800: #151B2D;
+  --color-copper: #C47B5E;
+  --color-silver: #F5F5F7;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  background-color: #0A0F1D;
+  color: #F5F5F7;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizzata stile terminale */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #C47B5E;
+}
