@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Zap, Radio } from 'lucide-react';
-import Logo from './Logo';
+import Logo from './LogoGallery';
 
 const Hero: React.FC = () => {
   const [bootSequence, setBootSequence] = useState(false);
