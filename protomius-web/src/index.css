@@ -1,33 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap');
 @import "tailwindcss";
 
-
 @theme {
-  --color-space-900: #0A0F1D;
-  --color-space-800: #151B2D;
+  --color-space-900: var(--bg-space);
+  --color-space-800: var(--bg-space-800);
   --color-copper: #C47B5E;
-  --color-silver: #F5F5F7;
+  --color-silver: var(--text-silver);
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
 :root {
-  background-color: #0A0F1D;
-  color: #F5F5F7;
+  --base-font-size: 16px;
+}
+
+html {
+  font-size: var(--base-font-size);
+  transition: font-size 0.2s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== DARK MODE (default) ===== */
+.dark {
+  --bg-space: #0A0F1D;
+  --bg-space-800: #151B2D;
+  --text-silver: #F5F5F7;
+  --text-primary: #FFFFFF;
+  --border-opacity: 0.05;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-border: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== LIGHT MODE (Blueprint Style) ===== */
+.light {
+  --bg-space: #F0F1F5;
+  --bg-space-800: #E4E5EB;
+  --text-silver: #1A1F2E;
+  --text-primary: #0A0F1D;
+  --border-opacity: 0.15;
+  --card-bg: rgba(0, 0, 0, 0.03);
+  --card-border: rgba(0, 0, 0, 0.08);
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: var(--bg-space);
+  color: var(--text-silver);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Scrollbar personalizzata stile terminale */
 ::-webkit-scrollbar {
   width: 5px;
 }
-::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background: #0A0F1D;
 }
-::-webkit-scrollbar-thumb {
+.dark ::-webkit-scrollbar-thumb {
+  background: #C47B5E;
+}
+.light ::-webkit-scrollbar-track {
+  background: #F0F1F5;
+}
+.light ::-webkit-scrollbar-thumb {
   background: #C47B5E;
 }
