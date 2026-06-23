@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROTOMIUS_PRICING as data } from '../config/services';
-import { Shield, Zap, Cpu, Globe, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Zap, Cpu, Globe, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const BusinessPlan: React.FC = () => {
   return (

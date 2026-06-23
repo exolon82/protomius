@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Type, Plus, Minus, Monitor } from 'lucide-react';
+import { Sun, Moon, Type, Plus, Minus } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
