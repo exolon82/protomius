@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>BUSINESS PLAN OPERATIVO: PROTOMIUS</title>
+  <style>
+    :root {
+      --bg: #0A0F1D;
+      --text: #F5F5F7;
+      --accent: #C47B5E;
+      --border: rgba(196, 123, 150, 0.15);
+      --card-bg: rgba(245, 245, 247, 0.02);
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .logo-box {
+      border: 1px solid rgba(196, 123, 94, 0.3);
+      padding: 24px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    h1 { font-size: 30px; letter-spacing: 5px; margin: 0; color: var(--text); font-weight: 800; }
+    h2 { font-size: 18px; color: var(--accent); letter-spacing: 2px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 40px; font-weight: 700; text-transform: uppercase; }
+    h3 { font-size: 15px; color: var(--text); margin-top: 25px; font-weight: 600; letter-spacing: 1px; }
+    p, li { font-size: 14px; color: #CBD5E1; text-align: justify; }
+    ul, ol { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .price-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      font-size: 13.5px;
+      background: var(--card-bg);
+    }
+    .price-table td:first-child {
+      font-weight: 600;
+      color: #FFF;
+    }
+    .price-tag {
+      color: var(--accent);
+      font-weight: 700;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+    
+    .print-btn {
+      background: var(--accent);
+      color: var(--text);
+      border: none;
+      padding: 14px 28px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      font-size: 13px;
+      transition: opacity 0.2s;
+    }
+    .print-btn:hover { opacity: 0.9; }
+    
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .protocol-card {
+      border: 1px solid var(--border);
+      padding: 15px;
+      background: var(--card-bg);
+    }
+    .protocol-card strong { color: var(--accent); }
+
+    @media print {
+      body { background: #FFF; color: #000; padding: 0; }
+      .print-btn { display: none; }
+      .container { max-width: 100%; }
+      h1, h2, h3 { color: #000; }
+      p, li, td { color: #222; }
+      .logo-box { border: 1px solid #000; }
+      .page-break { page-break-before: always; }
+      .price-table td { border: 1px solid #DDD; background: none; color: #000; }
+      .price-table td:first-child { color: #000; }
+      .price-tag { color: #000; }
+      .protocol-card { border: 1px solid #DDD; background: none; }
+      .protocol-card strong { color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button class="print-btn" onclick="window.print()">GENERA PDF / STAMPA INTERNA</button>
+
+  <!-- SEZIONE INTRODUTTIVA -->
+  <div class="header">
+    <div class="logo-box">
+      <h1>PROTO / MIUS</h1>
+      <div style="font-family: monospace; font-size: 11px; letter-spacing: 6px; color: var(--accent); margin-top: 6px;">BUSINESS PLAN OPERATIVO</div>
+    </div>
+    <p style="font-family: monospace; font-size: 11px; letter-spacing: 3px; text-align: center; margin: 0; opacity: 0.8;">Protocollo di Inizializzazione v1.0 // Designed for Order</p>
+  </div>
+
+  <h2>1. SINTESI ESECUTIVA (EXECUTIVE SUMMARY)</h2>
+  <p><strong>PROTOMIUS</strong> è un’entità professionale fondata da <strong>Nicola Lacerenza</strong>, operante nel settore dello sviluppo web high-end e dell’integrazione di sistemi di Intelligenza Artificiale. Il brand si distacca dalle agenzie di marketing generaliste per posizionarsi come un <em>Laboratorio di Architettura Digitale</em>.</p>
+  <p>Il payoff <strong>"Designed for Order"</strong> riassume la missione aziendale: risolvere l'entropia (caos) digitale dei clienti attraverso l'applicazione di protocolli tecnici rigorosi, basati su 20 anni di esperienza informatica. PROTOMIUS non vende solo siti web, ma infrastrutture tecnologiche indipendenti, sicure e performanti.</p>
+
+  <h2>2. PROFILO DEL FOUNDER E ASSET TECNICI</h2>
+  <p>L’azienda poggia sulla figura di Nicola Lacerenza, un professionista "Full-Stack Mentale" con un background unico:</p>
+  <ul>
+    <li><strong>Esperienza Ventennale:</strong> Evoluzione costante da tecnico hardware e sistemista a sviluppatore senior.</li>
+    <li><strong>Mentalità Autodidatta:</strong> Capacità di apprendimento rapido e adattamento alle nuove tecnologie (AI, local LLM, nuovi framework).</li>
+    <li><strong>Competenze Trasversali:</strong> Padronanza di WordPress (sviluppo plugin custom), React, PHP, Python, SEO tecnica e gestione campagne Google Ads.</li>
+    <li><strong>Visione:</strong> Passione per la fisica quantistica e il simbolismo, elementi che si traducono in un'attenzione maniacale per l'ordine e la struttura del codice.</li>
+  </ul>
+
+  <h2>3. BRAND IDENTITY: I 5 PROTOCOLLI</h2>
+  <p>L’identità visiva di PROTOMIUS è stata studiata per comunicare autorevolezza e mistero tecnologico attraverso cinque configurazioni d'ordine:</p>
+  
+  <div class="protocol-grid">
+    <div class="protocol-card">
+      <strong>Protocol Alpha (The Architect):</strong> Identità desktop complessa, richiama la cartografia stellare e il rigore ingegneristico.
+    </div>
+    <div class="protocol-card">
+      <strong>Protocol Beta (The Esoteric):</strong> Focus sulla geometria sacra (▲ ■ ◓ ◈ ⬡), simboleggia l'ordine restaurato dal caos.
+    </div>
+    <div class="protocol-card">
+      <strong>Protocol Gamma (The Essential):</strong> Versione ottimizzata per la User Experience mobile.
+    </div>
+    <div class="protocol-card">
+      <strong>Protocol Delta (The Encrypted):</strong> Logo dinamico che rappresenta il processo di decrittazione e risoluzione dei problemi.
+    </div>
+  </div>
+  <div class="protocol-card" style="margin-top: 15px;">
+    <strong>Protocol Epsilon (The Celestial):</strong> Rappresentazione del sistema stellare pulsante, legame tra dati tecnici e l'infinito.
+  </div>
+
+  <!-- BREAK PAGINA 2: PORTFOLIO E PREZZI -->
+  <div class="page-break"></div>
+  <h2>4. PORTFOLIO SERVIZI E LISTINO PREZZI</h2>
+
+  <h3>4.1 Architetture Web (Sviluppo)</h3>
+  <table class="price-table">
+    <tr>
+      <td>Sito Vetrina WordPress</td>
+      <td><span class="price-tag">€599</span> <small>(Manutenzione standard +€199/anno per fix grafici e sicurezza)</small></td>
+    </tr>
+    <tr>
+      <td>E-Commerce WordPress</td>
+      <td><span class="price-tag">€1.000</span> <small>(+€250/anno manutenzione. Extra: €50 ogni 150 prodotti aggiuntivi)</small></td>
+    </tr>
+    <tr>
+      <td>Restyling Sito WP</td>
+      <td><span class="price-tag">€399</span> <small>(+€199/anno manutenzione)</small></td>
+    </tr>
+    <tr>
+      <td>Sito Vetrina AdHoc (React/Vite)</td>
+      <td><span class="price-tag">€1.999</span> <small>(Sviluppo nativo senza CMS per prestazioni massime)</small></td>
+    </tr>
+    <tr>
+      <td>E-Commerce AdHoc</td>
+      <td><span class="price-tag">€3.999</span> <small>(Soluzione custom per business ad alto volume)</small></td>
+    </tr>
+  </table>
+
+  <h3>4.2 Innovazione AI (Intelligenza Sintetica)</h3>
+  <table class="price-table">
+    <tr>
+      <td>Neural Commerce (AI Driven)</td>
+      <td><span class="price-tag">€3.999</span> <small>(E-commerce evoluto con automazione schede prodotti, chatbot neurale e ricerca semantica)</small></td>
+    </tr>
+    <tr>
+      <td>Sito Vetrina AI (Layout Custom)</td>
+      <td><span class="price-tag">€599</span></td>
+    </tr>
+    <tr>
+      <td>Sito Vetrina AI (Layout Basic)</td>
+      <td><span class="price-tag">€299</span></td>
+    </tr>
+    <tr>
+      <td>Sviluppo App/Siti AI</td>
+      <td><span class="price-tag">€120 / giorno</span> <small>(Tariffa Consulenza Custom)</small></td>
+    </tr>
+  </table>
+
+  <h3>4.3 Servizi Specialistici e Problem Solving</h3>
+  <table class="price-table">
+    <tr>
+      <td>Problem Solving Tecnologico</td>
+      <td><span class="price-tag">€100 / ora</span> <small>(Interventi critici: recupero siti hackerati, bug-fixing, server Linux)</small></td>
+    </tr>
+    <tr>
+      <td>Gestione SEO Senior</td>
+      <td><span class="price-tag">€100 / ora</span></td>
+    </tr>
+    <tr>
+      <td>Google Ads Management</td>
+      <td><span class="price-tag">€299 / mese</span> <small>(Escluso budget pubblicitario)</small></td>
+    </tr>
+    <tr>
+      <td>Sviluppo Plugin WordPress Custom</td>
+      <td><span class="price-tag">da €499</span> <small>(Funzioni proprietarie per eliminare costi di licenza terzi)</small></td>
+    </tr>
+    <tr>
+      <td>Legal & Privacy (LegalBlink)</td>
+      <td><span class="price-tag">da €80 / anno</span></td>
+    </tr>
+  </table>
+
+  <!-- BREAK PAGINA 3: OPERATIVITÀ -->
+  <div class="page-break"></div>
+  <h2>5. IL MODELLO DI BUSINESS "CONTINUITY"</h2>
+  <p>Il pilastro finanziario fondamentale di PROTOMIUS è il <strong>Protocollo Continuity (All-in-One)</strong> al costo di <span class="price-tag">€600 / anno</span>.</p>
+  <p>Questo contratto garantisce linearità e sicurezza al cliente:</p>
+  <ul>
+    <li>Manutenzione tecnica continua e sicurezza totale delle infrastrutture.</li>
+    <li>Aggiornamenti grafici periodici (escluso il restyling strutturale completo).</li>
+    <li>Supporto sistemistico dedicato e monitoraggio costante dei server.</li>
+    <li><strong>Margine di guadagno elevato:</strong> L'assenza di costi per plugin di terze parti (sviluppati direttamente internamente) massimizza il profitto netto dello studio.</li>
+  </ul>
+  <p><em>Nota bene:</em> In assenza di questo contratto attivo, ogni singolo intervento richiesto dal cliente verrà fatturato alla tariffa on-demand standard di <strong>€80-€120 al giorno</strong>.</p>
+
+  <h2>6. STRATEGIA DI ACQUISIZIONE E SVILUPPO (MISSIONI)</h2>
+  
+  <h3>6.1 Acquisizione Attiva (Outreach)</h3>
+  <ul>
+    <li><strong>Deep Scan Protocol:</strong> Individuazione mirata di aziende con siti obsoleti, lenti o privi di protocolli di sicurezza minimi.</li>
+    <li><strong>Video Audit:</strong> Invio di un report video di 3 minuti (tramite Loom) che mostra direttamente le criticità tecniche strutturali e propone la soluzione PROTOMIUS.</li>
+  </ul>
+
+  <h3>6.2 Presidio Marketplace (Inbound)</h3>
+  <ul>
+    <li><strong>Fascia Elite:</strong> Candidatura e presidio su piattaforme quali Toptal, Mayple e Growtal per intercettare progetti internazionali ad alto budget.</li>
+    <li><strong>Fascia Volume:</strong> Utilizzo di Upwork e Freelancer per lo sviluppo verticale di plugin custom e integrazioni AI.</li>
+    <li><strong>Fascia Local:</strong> Presidio su ProntoPro per il contatto diretto e la conversione delle PMI sul territorio italiano.</li>
+  </ul>
+
+  <h3>6.3 Networking Strategico</h3>
+  <p>Creazione di partnership solide con agenzie di comunicazione "social-only" che necessitano di un partner tecnico senior affidabile ed esterno per la gestione del back-end e dell'architettura sistemistica.</p>
+
+  <h2>7. INFRASTRUTTURA E LOGISTICA</h2>
+  <p>L'azienda opera con un modello <strong>"Asset-Light"</strong> per azzerare i costi fissi. Non gestisce né possiede server fisici propri ma amministra istanze Cloud VPS su provider industriali d'élite (Hetzner / DigitalOcean). I costi vivi dell'hosting sono sempre intestati e a carico del cliente, garantendo a PROTOMIUS un rischio finanziario pari a zero e un <strong>margine operativo netto del 85-90%</strong>.</p>
+
+  <h2>8. CONCLUSIONI</h2>
+  <p>PROTOMIUS non è una semplice agenzia di servizi, ma un partner tecnologico strategico di alto livello. Il mix bilanciato tra 20 anni di esperienza "vecchia scuola" (hardware, logiche server Linux) e le nuove frontiere dell'Intelligenza Artificiale posiziona l'azienda in una nicchia di mercato protetta e impermeabile alla concorrenza a basso costo.</p>
+  
+  <p style="font-family: monospace; font-size: 13px; color: var(--accent); text-align: center; margin-top: 40px; letter-spacing: 2px;">
+    [ IL PROTOCOLLO 001 È ORA ATTIVO E PRONTO PER LA SCALABILITÀ ]
+  </p>
+</div>
+
+</body>
+</html>
