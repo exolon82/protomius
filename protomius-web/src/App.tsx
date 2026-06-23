@@ -1,6 +1,5 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import LogoGallery from './components/LogoGallery';
 import BusinessPlan from './components/BusinessPlan';
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
       <Header />
       <main className="bg-space-900 min-h-screen pt-20"> {/* pt-20 per non finire sotto l'header */}
         <Hero />
-        <LogoGallery />
         <BusinessPlan />
         <footer className="py-10 text-center opacity-20 font-mono text-[9px] uppercase tracking-[0.5em] text-silver">
           PROTOMIUS // All Rights Reserved 2024

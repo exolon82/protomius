@@ -96,7 +96,7 @@ const LogoCard = ({ logo, onClick, isSquare }: any) => (
 
 /* --- SVG ASSETS (INTEGRALI) CON SUPPORTO TEMA (currentColor) --- */
 
-const AlphaSVG = () => (
+export const AlphaSVG = () => (
   <svg viewBox="0 0 800 260" className="w-full h-auto">
     <path d="M 50,50 L 50,210 L 750,210" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.15"/>
     <g stroke="currentColor" strokeWidth="0.8" fill="none" opacity="0.15">
