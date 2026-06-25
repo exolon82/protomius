@@ -1,15 +1,15 @@
 import React from 'react';
 import { PROTOMIUS_PRICING as data } from '../config/services';
-import { 
-  Shield, Zap, Cpu, Globe, AlertTriangle, 
-  CheckCircle, Target, Search, Share2, Briefcase, Info 
+import {
+  Zap, Cpu, Globe, AlertTriangle,
+  CheckCircle, Briefcase,
 } from 'lucide-react';
 
 const BusinessPlan: React.FC = () => {
   return (
     <section id="protocol-details" className="py-24 bg-[#0A0F1D] text-silver px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* 1. SINTESI ESECUTIVA */}
         <div className="mb-24 border-l-2 border-copper pl-8">
           <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-4">01 // Executive Summary</h2>
@@ -42,24 +42,24 @@ const BusinessPlan: React.FC = () => {
         {/* 4. LISTINO PREZZI (TABELLE) */}
         <div className="mb-24">
           <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-12">04 // Portfolio Servizi & Listino [Inc. Rincaro 35%]</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* WEB ARCHITECTURE */}
-            <PriceCategory title="Architetture Web" icon={<Globe className="text-copper" size={20}/>}>
+            <PriceCategory title="Architetture Web" icon={<Globe className="text-copper" size={20} />}>
               {data.web_architecture.map((item, i) => (
                 <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
               ))}
             </PriceCategory>
 
             {/* AI INNOVATION */}
-            <PriceCategory title="Innovazione AI" icon={<Cpu className="text-copper" size={20}/>}>
+            <PriceCategory title="Innovazione AI" icon={<Cpu className="text-copper" size={20} />}>
               {data.ai_innovation.map((item, i) => (
                 <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
               ))}
             </PriceCategory>
 
             {/* SPECIALIST SERVICES */}
-            <PriceCategory title="Servizi Specialistici" icon={<Zap className="text-copper" size={20}/>}>
+            <PriceCategory title="Servizi Specialistici" icon={<Zap className="text-copper" size={20} />}>
               {data.specialist_services.map((item, i) => (
                 <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
               ))}
@@ -100,18 +100,18 @@ const BusinessPlan: React.FC = () => {
 
         {/* 7. INFRASTRUTTURA & CONCLUSIONI */}
         <div className="grid md:grid-cols-2 gap-8 mb-24 opacity-80">
-            <div className="p-8 border border-white/5 bg-white/[0.01]">
-                <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">07 // Infrastruttura</h3>
-                <p className="text-xs leading-relaxed italic text-silver/50">
-                    Filosofia <strong>"Asset-Light"</strong>: Istanze Cloud VPS (Hetzner/DigitalOcean) fatturate direttamente all'utente finale. Rischio finanziario nullo e <strong>margine operativo stimato: {data.extra.margin}</strong>.
-                </p>
-            </div>
-            <div className="p-8 border border-white/5 bg-white/[0.01]">
-                <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">08 // Conclusioni</h3>
-                <p className="text-xs leading-relaxed italic text-silver/50">
-                    PROTOMIUS è un partner ingegneristico d'élite. L'unione tra background sistemistico ventennale e avanguardia AI rende l'ecosistema aziendale solido e futuribile.
-                </p>
-            </div>
+          <div className="p-8 border border-white/5 bg-white/[0.01]">
+            <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">07 // Infrastruttura</h3>
+            <p className="text-xs leading-relaxed italic text-silver/50">
+              Filosofia <strong>"Asset-Light"</strong>: Istanze Cloud VPS (Hetzner/DigitalOcean) fatturate direttamente all'utente finale. Rischio finanziario nullo e <strong>margine operativo stimato: {data.extra.margin}</strong>.
+            </p>
+          </div>
+          <div className="p-8 border border-white/5 bg-white/[0.01]">
+            <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">08 // Conclusioni</h3>
+            <p className="text-xs leading-relaxed italic text-silver/50">
+              PROTOMIUS è un partner ingegneristico d'élite. L'unione tra background sistemistico ventennale e avanguardia AI rende l'ecosistema aziendale solido e futuribile.
+            </p>
+          </div>
         </div>
 
         {/* FINAL TAG */}
