@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <title>BUSINESS PLAN OPERATIVO: PROTOMIUS</title>
@@ -11,6 +12,7 @@
       --border: rgba(196, 123, 150, 0.15);
       --card-bg: rgba(245, 245, 247, 0.02);
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
@@ -19,51 +21,98 @@
       margin: 0;
       padding: 40px;
     }
+
     .container {
       max-width: 850px;
       margin: 0 auto;
     }
+
     .header {
       border-bottom: 2px solid var(--accent);
       padding-bottom: 30px;
       margin-bottom: 40px;
       text-align: center;
     }
+
     .logo-box {
       border: 1px solid rgba(196, 123, 94, 0.3);
       padding: 24px;
       display: inline-block;
       margin-bottom: 15px;
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 320px;
+      box-sizing: border-box;
     }
-    h1 { font-size: 30px; letter-spacing: 5px; margin: 0; color: var(--text); font-weight: 800; }
-    h2 { font-size: 18px; color: var(--accent); letter-spacing: 2px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 40px; font-weight: 700; text-transform: uppercase; }
-    h3 { font-size: 15px; color: var(--text); margin-top: 25px; font-weight: 600; letter-spacing: 1px; }
-    p, li { font-size: 14px; color: #CBD5E1; text-align: justify; }
-    ul, ol { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-    
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin: 0;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 15px;
+      color: var(--text);
+      margin-top: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    p,
+    li {
+      font-size: 14px;
+      color: #CBD5E1;
+      text-align: justify;
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     .price-table {
       width: 100%;
       border-collapse: collapse;
       margin: 15px 0;
     }
+
     .price-table td {
       padding: 10px 14px;
       border: 1px solid var(--border);
       font-size: 13.5px;
       background: var(--card-bg);
     }
+
     .price-table td:first-child {
       font-weight: 600;
       color: #FFF;
     }
+
     .price-tag {
       color: var(--accent);
       font-weight: 700;
       font-family: monospace;
       white-space: nowrap;
     }
-    
+
     .print-btn {
       background: var(--accent);
       color: var(--text);
@@ -76,198 +125,462 @@
       font-size: 13px;
       transition: opacity 0.2s;
     }
-    .print-btn:hover { opacity: 0.9; }
-    
-    .protocol-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+
+    .print-btn:hover {
+      opacity: 0.9;
+    }
+
+    .protocol-column {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
       margin-top: 15px;
     }
+
     .protocol-card {
       border: 1px solid var(--border);
-      padding: 15px;
+      padding: 24px;
       background: var(--card-bg);
     }
-    .protocol-card strong { color: var(--accent); }
+
+    .protocol-card strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .svg-container {
+      width: 100%;
+      margin-top: 15px;
+      color: var(--text);
+    }
 
     @media print {
-      body { background: #FFF; color: #000; padding: 0; }
-      .print-btn { display: none; }
-      .container { max-width: 100%; }
-      h1, h2, h3 { color: #000; }
-      p, li, td { color: #222; }
-      .logo-box { border: 1px solid #000; }
-      .page-break { page-break-before: always; }
-      .price-table td { border: 1px solid #DDD; background: none; color: #000; }
-      .price-table td:first-child { color: #000; }
-      .price-tag { color: #000; }
-      .protocol-card { border: 1px solid #DDD; background: none; }
-      .protocol-card strong { color: #000; }
+      body {
+        background: #FFF;
+        color: #000;
+        padding: 0;
+      }
+
+      .print-btn {
+        display: none;
+      }
+
+      .container {
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #000;
+      }
+
+      p,
+      li,
+      td {
+        color: #222;
+      }
+
+      .logo-box {
+        border: 1px solid #000;
+        background: none;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      .price-table td {
+        border: 1px solid #DDD;
+        background: none;
+        color: #000;
+      }
+
+      .price-table td:first-child {
+        color: #000;
+      }
+
+      .price-tag {
+        color: #000;
+      }
+
+      .protocol-card {
+        border: 1px solid #DDD;
+        background: none;
+        page-break-inside: avoid;
+      }
+
+      .protocol-card strong {
+        color: #000;
+      }
+
+      .svg-container {
+        color: #000;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div class="container">
-  <button class="print-btn" onclick="window.print()">GENERA PDF / STAMPA INTERNA</button>
+  <div class="container">
+    <button class="print-btn" onclick="window.print()">GENERA PDF / STAMPA INTERNA</button>
 
-  <!-- SEZIONE INTRODUTTIVA -->
-  <div class="header">
-    <div class="logo-box">
-      <h1>PROTO / MIUS</h1>
-      <div style="font-family: monospace; font-size: 11px; letter-spacing: 6px; color: var(--accent); margin-top: 6px;">BUSINESS PLAN OPERATIVO</div>
+    <div class="header">
+      <div class="logo-box">
+        <svg viewBox="0 0 512 512"
+          style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto 10px auto; color: var(--text);">
+          <defs>
+            <style>
+              @keyframes scanline {
+
+                0%,
+                100% {
+                  opacity: 0.2;
+                }
+
+                50% {
+                  opacity: 1;
+                }
+              }
+
+              .core-code {
+                animation: scanline 2s infinite ease-in-out;
+              }
+            </style>
+          </defs>
+          <rect x="110" y="110" width="292" height="292" fill="none" stroke="#C47B5E" stroke-width="1" opacity="0.3" />
+          <line x1="110" y1="110" x2="140" y2="110" stroke="currentColor" stroke-width="3" />
+          <line x1="402" y1="402" x2="372" y2="402" stroke="currentColor" stroke-width="3" />
+          <g fill="currentColor" text-anchor="middle"
+            style="font-family:sans-serif; font-weight:800; font-size:36px; letter-spacing:12px;">
+            <text x="256" y="190">PROTO</text>
+            <text x="256" y="250">MIUS</text>
+          </g>
+          <text x="256" y="310" fill="#C47B5E" class="core-code" text-anchor="middle"
+            style="font-family:monospace; font-weight:700; font-size:32px; letter-spacing:6px;">001</text>
+          <text x="256" y="360" fill="#C47B5E" text-anchor="middle"
+            style="font-family:monospace; font-size:14px; letter-spacing:8px;">▲■◓◈⬡</text>
+        </svg>
+        <div
+          style="font-family: monospace; font-size: 11px; letter-spacing: 6px; color: var(--accent); margin-top: 6px;">
+          BUSINESS PLAN OPERATIVO</div>
+      </div>
+      <p
+        style="font-family: monospace; font-size: 11px; letter-spacing: 3px; text-align: center; margin: 0; opacity: 0.8;">
+        Protocollo di Inizializzazione v1.0 // Designed for Order</p>
     </div>
-    <p style="font-family: monospace; font-size: 11px; letter-spacing: 3px; text-align: center; margin: 0; opacity: 0.8;">Protocollo di Inizializzazione v1.0 // Designed for Order</p>
+
+    <h2>1. SINTESI ESECUTIVA (EXECUTIVE SUMMARY)</h2>
+    <p><strong>PROTOMIUS</strong> è un’entità professionale fondata da <strong>Nicola Lacerenza</strong>, operante nel
+      settore dello sviluppo web high-end e dell’integrazione di sistemi di Intelligenza Artificiale. Il brand si
+      distacca dalle agenzie di marketing generaliste per posizionarsi come un <em>Laboratorio di Architettura
+        Digitale</em>.</p>
+    <p>Il payoff <strong>"Designed for Order"</strong> riassume la missione aziendale: risolvere l'entropia (caos)
+      digitale dei clienti attraverso l'applicazione di protocolli tecnici rigorosi, basati su 20 anni di esperienza
+      informatica. PROTOMIUS non vende solo siti web, ma infrastrutture tecnologiche indipendenti, sicure e performanti.
+    </p>
+
+    <h2>2. PROFILO DEL FOUNDER E ASSET TECNICI</h2>
+    <p>L’azienda poggia sulla figura di Nicola Lacerenza, un professionista "Full-Stack Mentale" con un background
+      unico:</p>
+    <ul>
+      <li><strong>Esperienza Ventennale:</strong> Sviluppatore senior evolutosi da competenze sistemistiche hardware e
+        Linux.</li>
+      <li><strong>Mentalità Autodidatta:</strong> Capacità di apprendimento rapido e adattamento costante (AI, local
+        LLM, nuovi framework).</li>
+      <li><strong>Competenze Trasversali:</strong> Padronanza di WordPress (sviluppo plugin custom), React, PHP, Python,
+        SEO tecnica e Google Ads.</li>
+    </ul>
+
+    <h2>3. BRAND IDENTITY: I 5 PROTOCOLLI</h2>
+    <p>L’identità visiva di PROTOMIUS è stata studiata per comunicare autorevolezza e mistero tecnologico attraverso
+      cinque configurazioni d'ordine strutturate in colonna:</p>
+
+    <div class="protocol-column">
+
+      <div class="protocol-card">
+        <strong>Protocol Alpha (The Architect):</strong> Identità desktop complessa, richiama la cartografia stellare e
+        il rigore ingegneristico.
+        <div class="svg-container">
+          <svg viewBox="0 0 800 260" style="width: 100%; height: auto;">
+            <path d="M 50,50 L 50,210 L 750,210" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15" />
+            <g stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.15">
+              <polyline points="630,70 660,110 680,150" />
+              <polyline points="610,120 660,110 710,95" />
+            </g>
+            <circle cx="660" cy="110" r="3.5" fill="#C47B5E" opacity="0.75" />
+            <text x="80" y="135" fill="currentColor"
+              style="font-family:sans-serif; font-weight:900; font-size:54px; letter-spacing:8px;">PR<tspan
+                fill="#C47B5E">0</tspan>T<tspan fill="#C47B5E">0</tspan>M<tspan fill="#C47B5E">1</tspan>US</text>
+            <text x="80" y="195" fill="currentColor" opacity="0.45"
+              style="font-family:monospace; font-size:12px; letter-spacing:4px;">CORE.SYSTEM_V1.0 // PHOENIX_DATA</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <strong>Protocol Beta (The Esoteric):</strong> Focus sulla geometria sacra (▲ ■ ◓ ◈ ⬡), simboleggia l'ordine
+        restaurato dal caos.
+        <div class="svg-container">
+          <svg viewBox="0 0 800 260" style="width: 100%; height: auto;">
+            <text x="75" y="115" fill="currentColor"
+              style="font-family:sans-serif; font-weight:700; font-size:44px; letter-spacing:15px;">PR<tspan
+                fill="#C47B5E">0</tspan>T<tspan fill="#C47B5E">0</tspan>M<tspan fill="#C47B5E">1</tspan>US</text>
+            <text x="75" y="160" fill="#C47B5E" style="font-family:monospace; font-size:12px; letter-spacing:6px;">▲ ■ ◓
+              ◈ ⬡ // ORDER_RESTORED</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <strong>Protocol Gamma (The Essential):</strong> Versione ottimizzata per la User Experience mobile.
+        <div class="svg-container"
+          style="text-align: center; padding: 20px 0; font-family: monospace; font-size: 13px; color: var(--accent); opacity: 0.5; border: 1px dashed var(--border);">
+          [ VARIATION GAMMA // DESIGNED_FOR_MOBILE_UX_MINIMAL ]
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <strong>Protocol Delta (The Encrypted):</strong> Logo dinamico che rappresenta il processo di decrittazione e
+        bioreferenziazione.
+        <div class="svg-container">
+          <svg viewBox="0 0 800 260" style="width: 100%; height: auto;">
+            <defs>
+              <style>
+                @keyframes morph {
+
+                  0%,
+                  45% {
+                    opacity: 1;
+                  }
+
+                  50%,
+                  95% {
+                    opacity: 0;
+                  }
+
+                  100% {
+                    opacity: 1;
+                  }
+                }
+
+                .s-text {
+                  animation: morph 4s infinite;
+                }
+
+                .r-text {
+                  animation: morph 4s infinite reverse;
+                }
+              </style>
+            </defs>
+            <text x="75" y="115" fill="currentColor"
+              style="font-family:sans-serif; font-weight:700; font-size:44px; letter-spacing:15px;">PR0T0M1US</text>
+            <g style="font-family:monospace; font-size:14px; letter-spacing:6px;">
+              <text x="75" y="160" fill="#C47B5E" class="s-text">▲ ■ ◓ ◈ ⬡ // ???_???_???</text>
+              <text x="75" y="160" fill="#C47B5E" class="r-text" style="opacity:0;">▲ ■ ◓ ◈ ⬡ // ORDER_RESTORED</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <strong>Protocol Epsilon (The Celestial):</strong> Rappresentazione del sistema stellare pulsante, legame tra
+        dati tecnici e l'infinito.
+        <div class="svg-container">
+          <svg viewBox="0 0 800 260" style="width: 100%; height: auto;">
+            <defs>
+              <style>
+                .star-blink {
+                  animation: star-blink-anim 3s infinite ease-in-out;
+                }
+
+                @keyframes star-blink-anim {
+
+                  0%,
+                  100% {
+                    opacity: 0.2;
+                  }
+
+                  50% {
+                    opacity: 0.8;
+                  }
+                }
+              </style>
+            </defs>
+            <rect x="50" y="50" width="680" height="160" fill="none" stroke="currentColor" stroke-width="1"
+              opacity="0.15" />
+            <g stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.3">
+              <polyline points="630,70 660,110 680,150" />
+              <polyline points="610,120 660,110 710,95" />
+              <line x1="680" y1="150" x2="650" y2="180" />
+            </g>
+            <circle class="star-blink" cx="630" cy="70" r="1.5" fill="currentColor" />
+            <circle class="star-blink" cx="680" cy="150" r="2" fill="currentColor" style="animation-delay:0.5s;" />
+            <circle class="star-blink" cx="610" cy="120" r="1.5" fill="currentColor" style="animation-delay:1s;" />
+            <circle class="star-blink" cx="710" cy="95" r="2" fill="currentColor" style="animation-delay:1.5s;" />
+            <circle class="star-blink" cx="650" cy="180" r="1" fill="currentColor" style="animation-delay:2s;" />
+            <circle cx="660" cy="110" r="3.5" fill="#C47B5E" opacity="0.75" />
+            <text x="75" y="115" fill="currentColor"
+              style="font-family:sans-serif; font-weight:700; font-size:44px; letter-spacing:15px;">PR<tspan
+                fill="#C47B5E">0</tspan>T<tspan fill="#C47B5E">0</tspan>M<tspan fill="#C47B5E">1</tspan>US</text>
+            <text x="75" y="160" fill="currentColor" opacity="0.6"
+              style="font-family:monospace; font-size:12px; letter-spacing:3px;">CORE.SYSTEM_V1.0 //
+              DESIGNED_FOR_ORDER</text>
+            <g fill="currentColor" opacity="0.6" text-anchor="end" style="font-family:monospace; font-size:11px;">
+              <text x="720" y="80">CONSTELLATION // PHOENIX</text>
+              <text x="720" y="100">SECONDARY_DATA // 228</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-break"></div>
+    <h2>4. PORTFOLIO SERVIZI E LISTINO PREZZI</h2>
+
+    <h3>4.1 Architetture Web (Sviluppo) [Incluso Rincaro Fiscale 35%]</h3>
+    <table class="price-table">
+      <tr>
+        <td>Sito Vetrina WordPress</td>
+        <td><span class="price-tag">€810</span> <small>(Manutenzione standard +€199/anno per fix grafici e
+            sicurezza)</small></td>
+      </tr>
+      <tr>
+        <td>E-Commerce WordPress</td>
+        <td><span class="price-tag">€1.350</span> <small>(+€250/anno manutenzione standard. Extra: €50 ogni 150 prodotti
+            aggiuntivi)</small></td>
+      </tr>
+      <tr>
+        <td>Restyling Sito WP</td>
+        <td><span class="price-tag">€540</span> <small>(+€199/anno manutenzione standard)</small></td>
+      </tr>
+      <tr>
+        <td>Sito Vetrina AdHoc (React/Vite)</td>
+        <td><span class="price-tag">€2.700</span> <small>(Sviluppo nativo ad alte prestazioni, manutenzione
+            on-demand)</small></td>
+      </tr>
+      <tr>
+        <td>E-Commerce AdHoc</td>
+        <td><span class="price-tag">€5.400</span> <small>(Infrastruttura headless custom per grandi volumi)</small></td>
+      </tr>
+    </table>
+
+    <h3>4.2 Innovazione AI e Intelligenza Sintetica [Incluso Rincaro Fiscale 35%]</h3>
+    <table class="price-table">
+      <tr>
+        <td>Neural Commerce (AI Driven)</td>
+        <td><span class="price-tag">€5.400</span> <small>(Automazione prodotti, chatbot neurale e ricerca semantica.
+            Manutenzione AI: <strong>+€540/anno</strong>)</small></td>
+      </tr>
+      <tr>
+        <td>Sito Vetrina AI (Layout Custom)</td>
+        <td><span class="price-tag">€810</span> <small>(Sviluppo front-end su misura con moduli AI. Manutenzione AI:
+            <strong>+€540/anno</strong>)</small></td>
+      </tr>
+      <tr>
+        <td>Sito Vetrina AI (Layout Basic)</td>
+        <td><span class="price-tag">€405</span> <small>(Struttura rapida pre-ottimizzata con logiche AI. Manutenzione
+            AI: <strong>+€540/anno</strong>)</small></td>
+      </tr>
+      <tr>
+        <td>Sviluppo App/Siti AI (Consulenza)</td>
+        <td><span class="price-tag">€160 / giorno</span> <small>(Progettazione logiche LLM, prompt engineering e tuning
+            modelli)</small></td>
+      </tr>
+    </table>
+
+    <h3>4.3 Servizi Specialistici e Problem Solving</h3>
+    <table class="price-table">
+      <tr>
+        <td>Problem Solving Tecnologico</td>
+        <td><span class="price-tag">€100 / ora</span> <small>(Interventi urgenti: ripristino malware, bug severi,
+            sistemistica Linux)</small></td>
+      </tr>
+      <tr>
+        <td>Gestione SEO Senior</td>
+        <td><span class="price-tag">€100 / ora</span> <small>(Ottimizzazione tecnica profonda ed indicizzazione
+            semantica)</small></td>
+      </tr>
+      <tr>
+        <td>Google Ads Management</td>
+        <td><span class="price-tag">€299 / mese</span> <small>(Strategia e monitoraggio campagne, escluso budget
+            media)</small></td>
+      </tr>
+      <tr>
+        <td>Sviluppo Plugin WordPress Custom</td>
+        <td><span class="price-tag">da €675</span> <small>(Architetture PHP proprietarie per eliminare costi di licenze
+            terze - Incluso +35%)</small></td>
+      </tr>
+      <tr>
+        <td>Legal & Privacy (LegalBlink)</td>
+        <td><span class="price-tag">da €80 / anno</span> <small>(Adeguamento GDPR automatizzato e monitorato)</small>
+        </td>
+      </tr>
+    </table>
+
+    <div class="page-break"></div>
+    <h2>5. IL MODELLO DI BUSINESS "CONTINUITY"</h2>
+    <p>Il pilastro finanziario fondamentale di PROTOMIUS si basa sulla ricorrenza delle entrate tramite due specifici
+      accordi di manutenzione ordinaria:</p>
+    <ul>
+      <li><strong>Protocollo Continuity Standard (<span class="price-tag">€600 / anno</span>):</strong> Dedicato alle
+        architetture web classiche. Garantisce linearità, aggiornamenti grafici costanti, monitoraggio e sicurezza
+        totale dei server escludendo i costi di licenze terze grazie al codice proprietario.</li>
+      <li><strong>Protocollo AI Maintenance (<span class="price-tag">€540 / anno</span>):</strong> Dedicato
+        specificamente alle soluzioni di Intelligenza Artificiale. Questa tariffa (strutturata sulla base di €400 + 35%
+        di rincaro tasse) assorbe l'infrastruttura di monitoraggio e la quota fissa minima di €200/anno richiesta per il
+        mantenimento dei modelli di calcolo, del model-tuning e del flusso continuo delle API.</li>
+    </ul>
+    <p><em>Nota bene:</em> In assenza di un accordo Continuity attivo, qualsiasi tipo di intervento tecnico correttivo o
+      di aggiornamento richiesto dal cliente verrà fatturato unicamente alla tariffa on-demand di <strong>€110 - €160 al
+        giorno</strong>.</p>
+
+    <h2>6. STRATEGIA DI ACQUISIZIONE E SVILUPPO (MISSIONI)</h2>
+
+    <h3>6.1 Acquisizione Attiva (Outreach)</h3>
+    <ul>
+      <li><strong>Deep Scan Protocol:</strong> Screening autonomo e mirato delle PMI con palesi vulnerabilità di
+        sicurezza, lentezza strutturale o layout obsoleti.</li>
+      <li><strong>Video Audit Direct:</strong> Invio di un report personalizzato in formato video tramite Loom (durata
+        max 3 min) per mostrare l'errore nel codice al potenziale cliente e proporre il reset ordinato di PROTOMIUS.
+      </li>
+    </ul>
+
+    <h3>6.2 Presidio Marketplace (Inbound)</h3>
+    <ul>
+      <li><strong>Fascia Elite (Internazionale):</strong> Presidio e candidatura su network ad alto budget come Toptal,
+        Mayple e Growtal.</li>
+      <li><strong>Fascia Volume (Tecnico):</strong> Presidio su Upwork e Freelancer per la vendita mirata e lo sviluppo
+        di micro-servizi AI e plugin WP.</li>
+      <li><strong>Fascia Local (Territoriale):</strong> Utilizzo di ProntoPro per l'aggancio e la conversione ad alto
+        margine di professionisti e aziende locali.</li>
+    </ul>
+
+    <h3>6.3 Networking Strategico</h3>
+    <p>Chiusura di accordi di subappalto continuativi con web agency puramente orientate al marketing o alla gestione
+      social, sprovviste di un reparto di sviluppo software interno di livello senior.</p>
+
+    <h2>7. INFRASTRUTTURA E LOGISTICA</h2>
+    <p>L'azienda applica rigorosamente una filosofia <strong>"Asset-Light"</strong> per mantenere i costi fissi
+      azzerati. Le istanze Cloud VPS (amministrate tramite Hetzner o DigitalOcean) e i relativi costi operativi e di
+      hosting sono intestati e fatturati direttamente all'utente finale. PROTOMIUS riduce a zero il rischio finanziario
+      di morosità sistemica, lavorando con un <strong>margine operativo netto stimato tra l'85% e il 90%</strong>.</p>
+
+    <h2>8. CONCLUSIONI</h2>
+    <p>PROTOMIUS non si posiziona come un'agenzia generalista sacrificabile, ma come un partner ingegneristico d'élite.
+      L'unione tra un background sistemistico ventennale ("vecchia scuola" su server Linux e codice nativo) e
+      l'integrazione d'avanguardia dell'Intelligenza Sintetica rende l'ecosistema aziendale solido, protetto e altamente
+      futuribile.</p>
+
+    <p
+      style="font-family: monospace; font-size: 13px; color: var(--accent); text-align: center; margin-top: 40px; letter-spacing: 2px;">
+      [ IL PROTOCOLLO 001 È ORA ATTIVO E PRONTO PER LA SCALABILITÀ ]
+    </p>
   </div>
-
-  <h2>1. SINTESI ESECUTIVA (EXECUTIVE SUMMARY)</h2>
-  <p><strong>PROTOMIUS</strong> è un’entità professionale fondata da <strong>Nicola Lacerenza</strong>, operante nel settore dello sviluppo web high-end e dell’integrazione di sistemi di Intelligenza Artificiale. Il brand si distacca dalle agenzie di marketing generaliste per posizionarsi come un <em>Laboratorio di Architettura Digitale</em>.</p>
-  <p>Il payoff <strong>"Designed for Order"</strong> riassume la missione aziendale: risolvere l'entropia (caos) digitale dei clienti attraverso l'applicazione di protocolli tecnici rigorosi, basati su 20 anni di esperienza informatica. PROTOMIUS non vende solo siti web, ma infrastrutture tecnologiche indipendenti, sicure e performanti.</p>
-
-  <h2>2. PROFILO DEL FOUNDER E ASSET TECNICI</h2>
-  <p>L’azienda poggia sulla figura di Nicola Lacerenza, un professionista "Full-Stack Mentale" con un background unico:</p>
-  <ul>
-    <li><strong>Esperienza Ventennale:</strong> Evoluzione costante da tecnico hardware e sistemista a sviluppatore senior.</li>
-    <li><strong>Mentalità Autodidatta:</strong> Capacità di apprendimento rapido e adattamento alle nuove tecnologie (AI, local LLM, nuovi framework).</li>
-    <li><strong>Competenze Trasversali:</strong> Padronanza di WordPress (sviluppo plugin custom), React, PHP, Python, SEO tecnica e gestione campagne Google Ads.</li>
-    <li><strong>Visione:</strong> Passione per la fisica quantistica e il simbolismo, elementi che si traducono in un'attenzione maniacale per l'ordine e la struttura del codice.</li>
-  </ul>
-
-  <h2>3. BRAND IDENTITY: I 5 PROTOCOLLI</h2>
-  <p>L’identità visiva di PROTOMIUS è stata studiata per comunicare autorevolezza e mistero tecnologico attraverso cinque configurazioni d'ordine:</p>
-  
-  <div class="protocol-grid">
-    <div class="protocol-card">
-      <strong>Protocol Alpha (The Architect):</strong> Identità desktop complessa, richiama la cartografia stellare e il rigore ingegneristico.
-    </div>
-    <div class="protocol-card">
-      <strong>Protocol Beta (The Esoteric):</strong> Focus sulla geometria sacra (▲ ■ ◓ ◈ ⬡), simboleggia l'ordine restaurato dal caos.
-    </div>
-    <div class="protocol-card">
-      <strong>Protocol Gamma (The Essential):</strong> Versione ottimizzata per la User Experience mobile.
-    </div>
-    <div class="protocol-card">
-      <strong>Protocol Delta (The Encrypted):</strong> Logo dinamico che rappresenta il processo di decrittazione e risoluzione dei problemi.
-    </div>
-  </div>
-  <div class="protocol-card" style="margin-top: 15px;">
-    <strong>Protocol Epsilon (The Celestial):</strong> Rappresentazione del sistema stellare pulsante, legame tra dati tecnici e l'infinito.
-  </div>
-
-  <!-- BREAK PAGINA 2: PORTFOLIO E PREZZI -->
-  <div class="page-break"></div>
-  <h2>4. PORTFOLIO SERVIZI E LISTINO PREZZI</h2>
-
-  <h3>4.1 Architetture Web (Sviluppo)</h3>
-  <table class="price-table">
-    <tr>
-      <td>Sito Vetrina WordPress</td>
-      <td><span class="price-tag">€599</span> <small>(Manutenzione standard +€199/anno per fix grafici e sicurezza)</small></td>
-    </tr>
-    <tr>
-      <td>E-Commerce WordPress</td>
-      <td><span class="price-tag">€1.000</span> <small>(+€250/anno manutenzione. Extra: €50 ogni 150 prodotti aggiuntivi)</small></td>
-    </tr>
-    <tr>
-      <td>Restyling Sito WP</td>
-      <td><span class="price-tag">€399</span> <small>(+€199/anno manutenzione)</small></td>
-    </tr>
-    <tr>
-      <td>Sito Vetrina AdHoc (React/Vite)</td>
-      <td><span class="price-tag">€1.999</span> <small>(Sviluppo nativo senza CMS per prestazioni massime)</small></td>
-    </tr>
-    <tr>
-      <td>E-Commerce AdHoc</td>
-      <td><span class="price-tag">€3.999</span> <small>(Soluzione custom per business ad alto volume)</small></td>
-    </tr>
-  </table>
-
-  <h3>4.2 Innovazione AI (Intelligenza Sintetica)</h3>
-  <table class="price-table">
-    <tr>
-      <td>Neural Commerce (AI Driven)</td>
-      <td><span class="price-tag">€3.999</span> <small>(E-commerce evoluto con automazione schede prodotti, chatbot neurale e ricerca semantica)</small></td>
-    </tr>
-    <tr>
-      <td>Sito Vetrina AI (Layout Custom)</td>
-      <td><span class="price-tag">€599</span></td>
-    </tr>
-    <tr>
-      <td>Sito Vetrina AI (Layout Basic)</td>
-      <td><span class="price-tag">€299</span></td>
-    </tr>
-    <tr>
-      <td>Sviluppo App/Siti AI</td>
-      <td><span class="price-tag">€120 / giorno</span> <small>(Tariffa Consulenza Custom)</small></td>
-    </tr>
-  </table>
-
-  <h3>4.3 Servizi Specialistici e Problem Solving</h3>
-  <table class="price-table">
-    <tr>
-      <td>Problem Solving Tecnologico</td>
-      <td><span class="price-tag">€100 / ora</span> <small>(Interventi critici: recupero siti hackerati, bug-fixing, server Linux)</small></td>
-    </tr>
-    <tr>
-      <td>Gestione SEO Senior</td>
-      <td><span class="price-tag">€100 / ora</span></td>
-    </tr>
-    <tr>
-      <td>Google Ads Management</td>
-      <td><span class="price-tag">€299 / mese</span> <small>(Escluso budget pubblicitario)</small></td>
-    </tr>
-    <tr>
-      <td>Sviluppo Plugin WordPress Custom</td>
-      <td><span class="price-tag">da €499</span> <small>(Funzioni proprietarie per eliminare costi di licenza terzi)</small></td>
-    </tr>
-    <tr>
-      <td>Legal & Privacy (LegalBlink)</td>
-      <td><span class="price-tag">da €80 / anno</span></td>
-    </tr>
-  </table>
-
-  <!-- BREAK PAGINA 3: OPERATIVITÀ -->
-  <div class="page-break"></div>
-  <h2>5. IL MODELLO DI BUSINESS "CONTINUITY"</h2>
-  <p>Il pilastro finanziario fondamentale di PROTOMIUS è il <strong>Protocollo Continuity (All-in-One)</strong> al costo di <span class="price-tag">€600 / anno</span>.</p>
-  <p>Questo contratto garantisce linearità e sicurezza al cliente:</p>
-  <ul>
-    <li>Manutenzione tecnica continua e sicurezza totale delle infrastrutture.</li>
-    <li>Aggiornamenti grafici periodici (escluso il restyling strutturale completo).</li>
-    <li>Supporto sistemistico dedicato e monitoraggio costante dei server.</li>
-    <li><strong>Margine di guadagno elevato:</strong> L'assenza di costi per plugin di terze parti (sviluppati direttamente internamente) massimizza il profitto netto dello studio.</li>
-  </ul>
-  <p><em>Nota bene:</em> In assenza di questo contratto attivo, ogni singolo intervento richiesto dal cliente verrà fatturato alla tariffa on-demand standard di <strong>€80-€120 al giorno</strong>.</p>
-
-  <h2>6. STRATEGIA DI ACQUISIZIONE E SVILUPPO (MISSIONI)</h2>
-  
-  <h3>6.1 Acquisizione Attiva (Outreach)</h3>
-  <ul>
-    <li><strong>Deep Scan Protocol:</strong> Individuazione mirata di aziende con siti obsoleti, lenti o privi di protocolli di sicurezza minimi.</li>
-    <li><strong>Video Audit:</strong> Invio di un report video di 3 minuti (tramite Loom) che mostra direttamente le criticità tecniche strutturali e propone la soluzione PROTOMIUS.</li>
-  </ul>
-
-  <h3>6.2 Presidio Marketplace (Inbound)</h3>
-  <ul>
-    <li><strong>Fascia Elite:</strong> Candidatura e presidio su piattaforme quali Toptal, Mayple e Growtal per intercettare progetti internazionali ad alto budget.</li>
-    <li><strong>Fascia Volume:</strong> Utilizzo di Upwork e Freelancer per lo sviluppo verticale di plugin custom e integrazioni AI.</li>
-    <li><strong>Fascia Local:</strong> Presidio su ProntoPro per il contatto diretto e la conversione delle PMI sul territorio italiano.</li>
-  </ul>
-
-  <h3>6.3 Networking Strategico</h3>
-  <p>Creazione di partnership solide con agenzie di comunicazione "social-only" che necessitano di un partner tecnico senior affidabile ed esterno per la gestione del back-end e dell'architettura sistemistica.</p>
-
-  <h2>7. INFRASTRUTTURA E LOGISTICA</h2>
-  <p>L'azienda opera con un modello <strong>"Asset-Light"</strong> per azzerare i costi fissi. Non gestisce né possiede server fisici propri ma amministra istanze Cloud VPS su provider industriali d'élite (Hetzner / DigitalOcean). I costi vivi dell'hosting sono sempre intestati e a carico del cliente, garantendo a PROTOMIUS un rischio finanziario pari a zero e un <strong>margine operativo netto del 85-90%</strong>.</p>
-
-  <h2>8. CONCLUSIONI</h2>
-  <p>PROTOMIUS non è una semplice agenzia di servizi, ma un partner tecnologico strategico di alto livello. Il mix bilanciato tra 20 anni di esperienza "vecchia scuola" (hardware, logiche server Linux) e le nuove frontiere dell'Intelligenza Artificiale posiziona l'azienda in una nicchia di mercato protetta e impermeabile alla concorrenza a basso costo.</p>
-  
-  <p style="font-family: monospace; font-size: 13px; color: var(--accent); text-align: center; margin-top: 40px; letter-spacing: 2px;">
-    [ IL PROTOCOLLO 001 È ORA ATTIVO E PRONTO PER LA SCALABILITÀ ]
-  </p>
-</div>
 
 </body>
+
 </html>

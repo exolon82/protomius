@@ -1,132 +1,122 @@
 import React from 'react';
 import { PROTOMIUS_PRICING as data } from '../config/services';
-import { Zap, Cpu, Globe, AlertTriangle, CheckCircle } from 'lucide-react';
+import { 
+  Shield, Zap, Cpu, Globe, AlertTriangle, 
+  CheckCircle, Target, Search, Share2, Briefcase, Info 
+} from 'lucide-react';
 
 const BusinessPlan: React.FC = () => {
   return (
-    <section id="protocol-details" className="py-24 bg-space-900 text-silver px-6 transition-colors duration-400">
+    <section id="protocol-details" className="py-24 bg-[#0A0F1D] text-silver px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-black uppercase tracking-tighter mb-4" style={{ color: 'var(--text-primary)' }}>
-            PROTOMIUS // <span className="text-copper">OFFERTA OPERATIVA</span>
-          </h2>
-          <p className="text-copper font-mono text-xs tracking-widest opacity-60 italic">
-            Configurazione costi v2.0 // Ordine Restaurato
+        {/* 1. SINTESI ESECUTIVA */}
+        <div className="mb-24 border-l-2 border-copper pl-8">
+          <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-4">01 // Executive Summary</h2>
+          <p className="text-base md:text-lg text-white font-light leading-relaxed mb-6">
+            <strong>PROTOMIUS</strong> è un’entità professionale operante nello sviluppo web high-end e nell’integrazione di sistemi di Intelligenza Artificiale. Il brand si posiziona come un <em>Laboratorio di Architettura Digitale</em>.
+          </p>
+          <p className="text-sm text-silver/60 leading-relaxed italic">
+            Il payoff <strong>"Designed for Order"</strong> riassume la missione aziendale: risolvere l'entropia (caos) digitale dei clienti attraverso l'applicazione di protocolli tecnici rigorosi, basati su 20 anni di esperienza informatica.
           </p>
         </div>
 
-        {/* GRIGLIA SERVIZI */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          
-          {/* WEB SOLUTIONS */}
-          <div className="p-8" style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-            <Globe className="text-copper mb-6" size={24} />
-            <h3 className="text-lg font-bold uppercase mb-6 pb-2" style={{ borderBottom: '1px solid var(--card-border)' }}>Web Architecture</h3>
-            <div className="space-y-6">
-              {data.web_solutions.map((item, i) => (
-                <div key={i} className="group">
-                  <div className="flex justify-between items-end">
-                    <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{item.name}</span>
-                    <span className="text-lg font-bold text-copper">€{item.price}</span>
-                  </div>
-                  <p className="text-[10px] text-silver/40 mt-1 italic leading-tight">{item.note}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* AI INNOVATION */}
-          <div className="p-8" style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-            <Cpu className="text-copper mb-6" size={24} />
-            <h3 className="text-lg font-bold uppercase mb-6 pb-2" style={{ borderBottom: '1px solid var(--card-border)' }}>AI Integration</h3>
-            <div className="space-y-6">
-              {data.ai_innovation.map((item, i) => (
-                <div key={i}>
-                  <div className="flex justify-between items-end">
-                    <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{item.name}</span>
-                    <span className="text-lg font-bold text-copper">€{item.price}</span>
-                  </div>
-                  {item.name === "Neural Commerce (AI)" && (
-                    <p className="text-[9px] text-copper/60 mt-1 uppercase font-bold tracking-tighter">
-                      Definizione: Automazione cataloghi, descrizioni generate da AI e ricerca semantica.
-                    </p>
-                  )}
-                  <p className="text-[10px] text-silver/40 mt-1 italic">{item.note}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CONTINUITY PLAN (ALL-IN-ONE) */}
-          <div className="border-2 border-copper/30 bg-copper/5 p-8 relative overflow-hidden">
-            <Zap className="text-copper mb-6" size={24} />
-            <div className="absolute top-4 right-4 text-[10px] font-mono text-copper opacity-50 uppercase tracking-widest">Recommended</div>
-            <h3 className="text-lg font-bold uppercase mb-6 border-b border-copper/20 pb-2">{data.maintenance_all_in.name}</h3>
-            <div className="text-2xl font-black mb-6" style={{ color: 'var(--text-primary)' }}>€{data.maintenance_all_in.price}</div>
-            <ul className="space-y-3 mb-8">
-              {data.maintenance_all_in.features.map((f, i) => (
-                <li key={i} className="text-[11px] flex items-center gap-2 text-silver/70">
-                  <CheckCircle size={12} className="text-copper" /> {f}
-                </li>
-              ))}
+        {/* 2. PROFILO FOUNDER */}
+        <div className="mb-24 grid md:grid-cols-2 gap-12 items-center bg-white/[0.01] p-8 border border-white/5">
+          <div>
+            <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-6">02 // Asset Tecnico Primario</h2>
+            <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-tighter">Nicola Lacerenza</h3>
+            <ul className="space-y-4">
+              <li className="text-sm flex items-start gap-3 italic"><CheckCircle size={16} className="text-copper mt-1" /> 20 Anni di esperienza: Sviluppatore senior evolutosi da competenze sistemistiche hardware e Linux.</li>
+              <li className="text-sm flex items-start gap-3 italic"><CheckCircle size={16} className="text-copper mt-1" /> Mentalità Autodidatta: Adattamento costante (AI, local LLM, nuovi framework).</li>
+              <li className="text-sm flex items-start gap-3 italic"><CheckCircle size={16} className="text-copper mt-1" /> Competenze Trasversali: WP Custom, React, PHP, Python, SEO tecnica e Google Ads.</li>
             </ul>
-            <p className="text-[9px] opacity-40 italic font-mono uppercase">Costi Server (Hosting) esclusi e a carico del cliente.</p>
+          </div>
+          <div className="text-right opacity-20 hidden md:block">
+            <Briefcase size={200} strokeWidth={0.5} />
           </div>
         </div>
 
-        {/* MESSAGGIO TARIFFE EXTRA */}
-        <div className="bg-red-950/10 border border-red-500/20 p-8 rounded-sm flex flex-col md:flex-row items-center gap-6">
-          <AlertTriangle className="text-red-500 shrink-0" size={32} />
-          <div className="text-center md:text-left">
-            <h4 className="font-bold uppercase text-sm mb-2" style={{ color: 'var(--text-primary)' }}>Avviso Protocollo Interventi Extra</h4>
-            <p className="text-silver/60 text-xs leading-relaxed italic">
-              In assenza di un contratto di manutenzione annuale attivo (Protocollo Continuity), qualsiasi modifica, fix o aggiornamento richiesto verrà fatturato con una <span className="font-bold" style={{ color: 'var(--text-primary)' }}>tariffa on-demand di €80 - €120 al giorno</span>, previa disponibilità tecnica.
+
+
+        {/* 4. LISTINO PREZZI (TABELLE) */}
+        <div className="mb-24">
+          <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-12">04 // Portfolio Servizi & Listino [Inc. Rincaro 35%]</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* WEB ARCHITECTURE */}
+            <PriceCategory title="Architetture Web" icon={<Globe className="text-copper" size={20}/>}>
+              {data.web_architecture.map((item, i) => (
+                <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
+              ))}
+            </PriceCategory>
+
+            {/* AI INNOVATION */}
+            <PriceCategory title="Innovazione AI" icon={<Cpu className="text-copper" size={20}/>}>
+              {data.ai_innovation.map((item, i) => (
+                <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
+              ))}
+            </PriceCategory>
+
+            {/* SPECIALIST SERVICES */}
+            <PriceCategory title="Servizi Specialistici" icon={<Zap className="text-copper" size={20}/>}>
+              {data.specialist_services.map((item, i) => (
+                <PriceItem key={i} name={item.name} price={item.price} note={item.note} />
+              ))}
+            </PriceCategory>
+          </div>
+        </div>
+
+        {/* 5. MODELLO CONTINUITY */}
+        <div className="mb-24">
+          <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-10">05 // Modello Continuity</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {data.continuity_protocols.map((p, i) => (
+              <div key={i} className="p-8 border border-copper/30 bg-copper/5">
+                <h4 className="text-white font-bold uppercase mb-2">{p.name}</h4>
+                <div className="text-2xl font-black text-copper mb-4">€{p.price}</div>
+                <p className="text-sm text-silver/60 italic">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          {/* ALERT RATE */}
+          <div className="mt-8 bg-red-950/20 border border-red-500/30 p-6 flex items-center gap-6">
+            <AlertTriangle className="text-red-500 shrink-0" size={24} />
+            <p className="text-sm italic">
+              In assenza di accordo Continuity, gli interventi tecnici verranno fatturati unicamente alla tariffa on-demand di <strong>€{data.extra.on_demand_rate} al giorno</strong>.
             </p>
           </div>
-          <div className="ml-auto text-right font-mono text-[10px] opacity-30">
-            REF_CODE: NO_CONTRACT_RATE_v1
+        </div>
+
+        {/* 6. MISSIONI ACQUISIZIONE */}
+        <div className="mb-24">
+          <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-10">06 // Strategia di Acquisizione (Missioni)</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <MissionCard title="Deep Scan Protocol" desc="Screening mirato delle PMI con vulnerabilità di sicurezza o layout obsoleti." />
+            <MissionCard title="Video Audit Direct" desc="Invio report personalizzati Loom (max 3 min) per mostrare l'errore nel codice." />
+            <MissionCard title="Marketplace & Networking" desc="Presidio Toptal, Mayple, ProntoPro e subappalto per agenzie marketing-only." />
           </div>
         </div>
 
-        {/* INFILTRAZIONE MERCATO */}
-        <div className="mt-24">
-          <div className="flex items-center space-x-3 mb-10">
-            <Globe className="text-copper" size={30} />
-            <h2 className="text-3xl font-bold uppercase tracking-tighter">Infiltrazione Mercato // Strategia di Acquisizione</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* CANALI PASSIVI: MARKETPLACE */}
-            <div className="space-y-6">
-              <h3 className="text-sm font-mono text-copper uppercase tracking-widest pb-2" style={{ borderBottom: '1px solid var(--card-border)' }}>Inbound: Marketplace Presidiati</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <Platform name="Toptal / Mayple" level="Elite" desc="Per progetti Senior ad alto budget." />
-                <Platform name="Upwork / Freelancer" level="Global" desc="Volume e progetti Custom AI." />
-                <Platform name="ProntoPro" level="Local" desc="Target PMI Italia / Consulenza diretta." />
-                <Platform name="99Designs" level="Creative" desc="Vendita Brand Identity & Concept." />
-              </div>
+        {/* 7. INFRASTRUTTURA & CONCLUSIONI */}
+        <div className="grid md:grid-cols-2 gap-8 mb-24 opacity-80">
+            <div className="p-8 border border-white/5 bg-white/[0.01]">
+                <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">07 // Infrastruttura</h3>
+                <p className="text-xs leading-relaxed italic text-silver/50">
+                    Filosofia <strong>"Asset-Light"</strong>: Istanze Cloud VPS (Hetzner/DigitalOcean) fatturate direttamente all'utente finale. Rischio finanziario nullo e <strong>margine operativo stimato: {data.extra.margin}</strong>.
+                </p>
             </div>
-
-            {/* STRATEGIA ATTIVA: OUTREACH */}
-            <div className="space-y-6">
-              <h3 className="text-sm font-mono text-copper uppercase tracking-widest pb-2" style={{ borderBottom: '1px solid var(--card-border)' }}>Outbound: Deep Scan Protocol</h3>
-              <div className="space-y-4">
-                <div className="p-4" style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-                  <p className="text-xs font-bold uppercase mb-1" style={{ color: 'var(--text-primary)' }}>Targeting Diretto</p>
-                  <p className="text-[10px] text-silver/50 leading-relaxed italic">
-                    Individuazione di aziende con infrastrutture obsolete (No-SSL, Mobile-Fail, Slow-Loading). 
-                  </p>
-                </div>
-                <div className="p-4" style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-                  <p className="text-xs font-bold uppercase mb-1" style={{ color: 'var(--text-primary)' }}>Video Audit Personalizzato</p>
-                  <p className="text-[10px] text-silver/50 leading-relaxed italic">
-                    Invio di mini-report tecnici (Loom) che mostrano il "bug" e la "soluzione" PROTOMIUS. Efficacia di conversione stimata: 15-20%.
-                  </p>
-                </div>
-              </div>
+            <div className="p-8 border border-white/5 bg-white/[0.01]">
+                <h3 className="text-sm font-bold text-white uppercase mb-4 tracking-widest">08 // Conclusioni</h3>
+                <p className="text-xs leading-relaxed italic text-silver/50">
+                    PROTOMIUS è un partner ingegneristico d'élite. L'unione tra background sistemistico ventennale e avanguardia AI rende l'ecosistema aziendale solido e futuribile.
+                </p>
             </div>
-          </div>
+        </div>
+
+        {/* FINAL TAG */}
+        <div className="text-center font-mono text-xs text-copper tracking-[0.4em] opacity-40 uppercase">
+          [ Il Protocollo 001 è ora attivo e pronto per la scalabilità ]
         </div>
 
       </div>
@@ -134,13 +124,30 @@ const BusinessPlan: React.FC = () => {
   );
 };
 
-const Platform = ({ name, level, desc }: { name: string, level: string, desc: string }) => (
-  <div className="p-4 hover:border-copper/30 transition-all" style={{ border: '1px solid var(--card-border)', backgroundColor: 'var(--card-bg)' }}>
-    <div className="flex justify-between items-center mb-2">
-      <span className="text-[10px] font-bold uppercase" style={{ color: 'var(--text-primary)' }}>{name}</span>
-      <span className="text-[8px] px-2 py-0.5 bg-copper/20 text-copper rounded-full uppercase">{level}</span>
+/* SOTTO-COMPONENTI */
+const PriceCategory = ({ title, icon, children }: any) => (
+  <div className="bg-white/[0.02] border border-white/5 p-8">
+    <div className="flex items-center gap-3 mb-8 border-b border-white/10 pb-4">
+      {icon} <h3 className="text-sm font-bold text-white uppercase tracking-widest">{title}</h3>
     </div>
-    <p className="text-[9px] text-silver/40 leading-tight italic">{desc}</p>
+    <div className="space-y-8">{children}</div>
+  </div>
+);
+
+const PriceItem = ({ name, price, note }: any) => (
+  <div className="group">
+    <div className="flex justify-between items-end gap-4 mb-1">
+      <span className="text-sm font-bold text-white group-hover:text-copper transition-colors">{name}</span>
+      <span className="text-base font-mono font-bold text-copper whitespace-nowrap">€{price}</span>
+    </div>
+    <p className="text-xs text-silver/40 italic leading-snug">{note}</p>
+  </div>
+);
+
+const MissionCard = ({ title, desc }: any) => (
+  <div className="p-6 border-l border-copper bg-white/[0.02]">
+    <h4 className="text-sm font-bold text-white uppercase mb-2 tracking-tight">{title}</h4>
+    <p className="text-xs text-silver/50 italic leading-relaxed">{desc}</p>
   </div>
 );
 

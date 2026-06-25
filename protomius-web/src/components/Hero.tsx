@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Zap, Radio } from 'lucide-react';
-import Logo from './LogoGallery';
+import LogoGallery from './LogoGallery';
 
 const Hero: React.FC = () => {
   const [bootSequence, setBootSequence] = useState(false);
@@ -25,16 +25,19 @@ const Hero: React.FC = () => {
         <p>Location: 40.6327° N, 17.9418° E</p>
       </div>
 
-      {/* 3. CONTENUTO PRINCIPALE */}
+     
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="z-10 w-full max-w-6xl flex flex-col items-center mt-4 md:mt-10"
       >
-        {/* Logo Principale (Alpha/Gamma) */}
-        <Logo />
-
-        {/* SERVICE CARDS - Ottimizzate per Mobile UX */}
+    
+                {/* 3. BRAND IDENTITY (I 5 PROTOCOLLI) */}
+        <div className="mb-24">
+          <h2 className="text-sm font-mono text-copper uppercase tracking-[0.4em] mb-12 text-center">03 // Brand Identity: I 5 Protocolli</h2>
+          <LogoGallery />
+        </div>
+      
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           animate={bootSequence ? { y: 0, opacity: 1 } : {}}
